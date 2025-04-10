@@ -136,17 +136,6 @@ export function Layout() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 border-t border-gray-700">
               <Link
-                to="/dashboard"
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-all ${
-                  isActive('/dashboard')
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
-                onClick={() => setMenuOpen(false)}
-              >
-                Dashboard
-              </Link>
-              <Link
                 to="/mapa"
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-all ${
                   isActive('/mapa')
@@ -158,15 +147,26 @@ export function Layout() {
                 Mapa
               </Link>
               <Link
-                to="/perfil"
+                to="/alarma"
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-all ${
-                  isActive('/perfil')
+                  isActive('/alarma')
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                 }`}
                 onClick={() => setMenuOpen(false)}
               >
-                Perfil
+                Alarma
+              </Link>
+              <Link
+                to="/colisiones"
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-all ${
+                  isActive('/colisiones')
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                Colisiones
               </Link>
               <button
                 onClick={() => {

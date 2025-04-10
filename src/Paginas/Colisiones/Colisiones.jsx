@@ -15,7 +15,7 @@ export function Colisiones() {
 
   useEffect(() => {
     audioRef.current = new Audio("/alert.mp3");
-    socketRef.current = io("http://ws-node.zapto.org/");
+    socketRef.current = io("https://ws-node.zapto.org/");
 
     socketRef.current.on("connect", () => {
       console.log("Conectado al servidor Socket.IO");
