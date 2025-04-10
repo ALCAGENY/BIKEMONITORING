@@ -133,7 +133,8 @@ export function Colisiones() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white p-4">
+    <div>
+      <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white p-4">
       <button
         onClick={toggleAlarma}
         className="mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg"
@@ -329,14 +330,13 @@ export function Colisiones() {
             {isConnected ? "Operativo" : "Sin conexión"}
           </div>
         </div>
-      </div>
 
-      <div className="w-full max-w-4xl bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all hover:shadow-xl mb-4">
+        <div className="w-full max-w-4xl bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all hover:shadow-xl mb-4">
         <div className="p-4">
           <h2 className="text-lg font-bold mb-2 border-b border-gray-700 pb-2">
             Estado de la conexión
           </h2>
-          <div className="text-sm font-mono bg-gray-900 p-3 rounded">
+          <div className="text-sm font-mono bg-gray-900 p-3 rounded text-white">
             <p>Servidor: Activo</p>
             <p>Tópico: prueba.vibracion</p>
             <p>Estado: {isConnected ? "✅ Conectado" : "❌ Desconectado"}</p>
@@ -344,11 +344,9 @@ export function Colisiones() {
           </div>
         </div>
       </div>
-
-      {/* Pie de página */}
-      <div className="mt-auto w-full max-w-4xl text-center py-4 text-xs text-gray-500">
-        Sistema de Detección de Colisiones • Actualizado en tiempo real
       </div>
+
+      
     </div>
   );
 }
