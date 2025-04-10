@@ -253,71 +253,7 @@ export function Colisiones() {
         </div>
       </div>
 
-      {/* Historial de colisiones */}
-      <div className="w-full max-w-4xl bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all hover:shadow-xl mb-4">
-        <div className="p-6">
-          <h2 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-blue-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-              />
-            </svg>
-            Historial de Colisiones
-          </h2>
-
-          {collisions.length === 0 ? (
-            <div className="text-center py-8 text-gray-500">
-              No hay colisiones registradas
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm text-left">
-                <thead className="text-xs text-gray-400 uppercase bg-gray-700">
-                  <tr>
-                    <th className="px-4 py-3 rounded-tl-lg">Fecha y Hora</th>
-                    <th className="px-4 py-3">Intensidad</th>
-                    <th className="px-4 py-3 rounded-tr-lg">Detalles</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {collisions.map((collision, index) => (
-                    <tr
-                      key={collision.id}
-                      className={
-                        index % 2 === 0 ? "bg-gray-800" : "bg-gray-750"
-                      }
-                    >
-                      <td className="px-4 py-3 font-mono">
-                        {formatDateTime(collision.timestamp)}
-                      </td>
-                      <td className="px-4 py-3">
-                        <div className="flex items-center gap-2">
-                          <div
-                            className={`w-3 h-3 rounded-full ${getIntensityClass(
-                              collision.intensity
-                            )}`}
-                          ></div>
-                          <span>{collision.intensity.toFixed(1)}</span>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">{collision.message}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
-      </div>
++
 
         <div className="bg-gray-800 rounded-xl p-4 shadow-md border border-gray-700 transition-all hover:shadow-lg">
           <h3 className="text-gray-400 text-sm mb-2">Estado sensor</h3>
