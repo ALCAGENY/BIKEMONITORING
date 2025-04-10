@@ -39,7 +39,7 @@ export function Mapa() {
   // Conectar con el servidor Socket.IO
   useEffect(() => {
     // Conexión al socket
-    socketRef.current = io("http://localhost:8090");
+    socketRef.current = io("http://ws-node.zapto.org/");
     
     socketRef.current.on("connect", () => {
       console.log("Conectado al servidor Socket.IO");
