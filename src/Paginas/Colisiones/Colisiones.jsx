@@ -318,25 +318,6 @@ export function Colisiones() {
         </div>
       </div>
 
-      {/* Panel de estadísticas */}
-      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-        <div className="bg-gray-800 rounded-xl p-4 shadow-md border border-gray-700 transition-all hover:shadow-lg">
-          <h3 className="text-gray-400 text-sm mb-2">Total de colisiones</h3>
-          <div className="text-3xl font-bold">{collisions.length}</div>
-        </div>
-
-        <div className="bg-gray-800 rounded-xl p-4 shadow-md border border-gray-700 transition-all hover:shadow-lg">
-          <h3 className="text-gray-400 text-sm mb-2">Intensidad media</h3>
-          <div className="text-3xl font-bold">
-            {collisions.length > 0
-              ? (
-                  collisions.reduce((sum, c) => sum + c.intensity, 0) /
-                  collisions.length
-                ).toFixed(1)
-              : "0.0"}
-          </div>
-        </div>
-
         <div className="bg-gray-800 rounded-xl p-4 shadow-md border border-gray-700 transition-all hover:shadow-lg">
           <h3 className="text-gray-400 text-sm mb-2">Estado sensor</h3>
           <div className="text-xl font-bold flex items-center gap-2">
